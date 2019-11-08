@@ -1,10 +1,11 @@
 import cv2
 import matplotlib.pyplot as plt
 
-gd_img = cv2.imread('../img_src/gaoda.jpg')
+img = cv2.imread('./yiquan.jpg')
 
-cv2.imwrite('../img_src/gaoda_copy.jpg', gd_img)
+img = img[:, :, [2, 1, 0]]
 
-plt.imshow(gd_img[:, :, (2, 1, 0)])
+img[:, :, [0, 1]] = 0
 
+plt.imshow(img)
 plt.show()
