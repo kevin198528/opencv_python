@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-img_rgb = cv2.imread('matlab_log.png')
+img_rgb = cv2.imread('../img_src/opencv_logo.png')
 
 img_rgb = img_rgb[:, :, ::-1]
 
@@ -12,7 +12,6 @@ img_hsv[:, :, 0] = img_hsv[:, :, 0]*(255/180)
 
 green_maskA = img_hsv[:, :, 0] == 85
 green_maskB = img_hsv[:, :, 1] > 1
-
 green_mask = green_maskA & green_maskB
 
 # c, v = np.histogram(img_hsv[:, :, 1])
